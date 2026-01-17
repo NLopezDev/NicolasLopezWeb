@@ -57,7 +57,7 @@ header p {
 .img-logo {
   width: 300px;
   height: 100px;
-  background-image: url('/assets/logos/Logo-sf-edit.png');
+  background-image: url('assets/logos/Logo-sf-edit.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -251,7 +251,7 @@ footer p {
   .img-logo {
     width: 200px;
     height: 80px;
-    background-image: url('/assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
+    background-image: url('assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
   }
   
   nav {
@@ -367,7 +367,7 @@ footer p {
   .img-logo {
     width: 150px;
     height: 60px;
-    background-image: url('/assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
+    background-image: url('assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
   }
   
   nav {
