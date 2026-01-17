@@ -11,14 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Lopez - Desarrollo Web</title>
 </head>
 
 <body>
     <header id="home">
         <nav>
-            <a href="#home"><img class="img-logo" src="assets/logos/Logo-sf-edit.png" alt="Logo Nicolas Lopez"></a>
-            <div class="nav-menu">
+            <!-- Logo como div con background-image para cambiarlo fácilmente -->
+            <a href="#home" class="logo-link">
+                <div class="img-logo"></div>
+            </a>
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <button class="hamburger" id="hamburger-btn">☰</button>
+            <div class="nav-menu" id="nav-menu">
                 <a href="#services">Servicios</a> |
                 <a href="#proyects">Proyectos</a> |
                 <a href="#about">Sobre Mi</a> |
@@ -30,6 +36,7 @@
         <p>Web claras, rapidas y funcionales. <br> Sin complicaciones tecnicas.</p>
     </header>
 
+    <!-- Resto del HTML igual -->
     <section class="Servicios" id="services">
         <h2>Servicios</h2>
         <div class="row">
@@ -152,6 +159,15 @@
         <p>&copy; 2026 Nicolas Lopez Web. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // Muestra/oculta el menú
+        });
+    </script>
 </body>
 
 </html>

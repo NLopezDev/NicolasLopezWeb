@@ -49,10 +49,36 @@ header p {
   margin-top: 4rem;
 }
 
-.img-logo {
+/* Logo: background-image con fallback */
+.logo-link {
   display: block;
-  margin: 0;
-  max-width:300px;
+}
+
+.img-logo {
+  width: 300px;
+  height: 100px;
+  background-image: url('/assets/logos/Logo-sf-edit.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-logo:empty::after {
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2563eb;
 }
 
 nav {
@@ -196,4 +222,216 @@ footer p {
   padding: 1rem 0;
   margin: 0;
   font-size: 1rem;
+}
+
+/* Media Queries para responsividad */
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    padding: 2rem 0 1rem 0;
+  }
+  
+  header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  .img-logo {
+    width: 200px;
+    height: 80px;
+    background-image: url('/assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
+  }
+  
+  nav {
+    position: relative; /* Para posicionar el menú desplegable */
+    flex-direction: row; /* Logo y hamburguesa en fila */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Debajo del nav */
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Fondo para el menú */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-menu a {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .Servicios .row {
+    margin: 1rem;
+  }
+  
+  .Servicios .card {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .Proyectos .contenedor-card {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .Proyectos .card {
+    width: 100%;
+    max-width: 18rem;
+    margin: 1rem 0;
+  }
+  
+  .SobreMi {
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  
+  .SobreMi p {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .Contacto h2 {
+    margin-top: 4rem;
+    font-size: 1.8rem;
+  }
+  
+  .Contacto p {
+    font-size: 1.2rem;
+  }
+  
+  .nav-footer {
+    display: none;
+  }
+}
+
+/* Móviles (≤480px) */
+@media (max-width: 480px) {
+  h1 {
+    padding: 3rem 0 1rem 0;
+  }
+  
+  h2, h5 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .img-logo {
+    width: 150px;
+    height: 60px;
+    background-image: url('/assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
+  }
+  
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+  }
+  
+  .nav-menu a {
+    font-size: 0.9rem;
+  }
+  
+  .Servicios h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .Servicios .card {
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+  
+  .Servicios .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .Servicios .card-text {
+    font-size: 1rem;
+  }
+  
+  .Proyectos h2 {
+    margin-top: 4rem;
+    font-size: 1.8rem;
+  }
+  
+  .Proyectos .card {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+  }
+  
+  .SobreMi h2 {
+    margin-top: 4rem;
+    font-size: 1.8rem;
+  }
+  
+  .SobreMi p {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .Contacto h2 {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
+  
+  .Contacto a {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
 }
