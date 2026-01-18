@@ -159,8 +159,15 @@
         <p>&copy; 2026 Nicolas Lopez Web. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
 
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // Muestra/oculta el menú
+        });
+    </script>
 </body>
 
 </html>
