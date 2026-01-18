@@ -57,11 +57,12 @@ header p {
 .img-logo {
   width: 300px;
   height: 100px;
-  background-image: url('/assets/logos/logo-sf-edit.png');
+  background-image: url('../assets/logos/Logo-sf-edit.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 .img-logo:empty::after {
   display: block;
@@ -82,6 +83,7 @@ header p {
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -255,7 +257,6 @@ footer p {
   }
   
   nav {
-    position: relative; /* Para posicionar el menú desplegable */
     flex-direction: row; /* Logo y hamburguesa en fila */
     justify-content: space-between;
     align-items: center;
