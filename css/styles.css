@@ -57,12 +57,11 @@ header p {
 .img-logo {
   width: 300px;
   height: 100px;
-  background-image: url('../assets/logos/Logo-sf-edit.png');
+  background-image: url('../assets/logos/logo-sf-edit.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 .img-logo:empty::after {
   display: block;
@@ -124,12 +123,12 @@ nav {
 }
 
 .Servicios .card-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .Servicios .card-text {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 /* Proyectos */
@@ -150,6 +149,20 @@ nav {
   margin: 2rem;
   border: 2px solid;
   border-radius: 8px;
+}
+
+.Proyectos .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Proyectos .card-text {
+  font-size: 1.2rem;
+}
+
+.Proyectos p {
+  font-size: 1rem;
+  padding: 0 1rem;
 }
 
 .card .btn {
