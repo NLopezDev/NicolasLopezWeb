@@ -251,7 +251,7 @@ footer p {
   .img-logo {
     width: 200px;
     height: 80px;
-    background-image: url('../assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
+    background-image: url('../assets/logos/nl-sf-mobile-edit.png');
   }
   
   nav {
@@ -367,7 +367,7 @@ footer p {
   .img-logo {
     width: 150px;
     height: 60px;
-    background-image: url('../assets/logos/nl-sf-mobile-edit.png'); /* Cambia a Logo-small.png si tienes */
+    background-image: url('../assets/logos/nl-sf-mobile-edit.png');
   }
   
   nav {
